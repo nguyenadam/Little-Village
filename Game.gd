@@ -65,7 +65,7 @@ func generate_player_card(name):
 
 func generate_shop_card():
 	var card = shop_card_template.instance()
-	card.init('grove')
+	card.init('garden')
 	self.add_child(card)
 	current_shop.append(card)
 	card.connect("clicked", self, "handle_shop_card_click")
