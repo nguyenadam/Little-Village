@@ -10,3 +10,8 @@ func get_dice():
 			var number = rng.randi_range(item.min, item.max)
 			dice.append([item.color, number])
 	return dice
+
+
+func _on_Node2D_mouse_entered():
+	print("MOUSE ENTERED")
+	pass # Replace with function body.
