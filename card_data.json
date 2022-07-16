@@ -1,0 +1,39 @@
+{
+    "garden": {
+        "id": 1,
+        "name": "Garden",
+        "cost": [
+            ["green", 2],
+            ["brown", 1]
+        ],
+        "output": [
+            {
+                "color": "green",
+                "min": 1,
+                "max": 2,
+                "condition": null
+            }
+        ],
+        "descr": "Idk... some birds or something",
+        "type": "resource",
+        "image_path": "Assets/card_images/Garden.png",
+        "workers": 1
+    },
+    "forest": {
+        "id": 2,
+        "name": "Forest",
+        "series": 1,
+        "mana": 4,
+        "descr": "Attack is a major strength of the character.",
+        "attack": 8,
+        "defend": 2
+    },
+    "3": {
+        "id": 3,
+        "name": "Max",
+        "series": 1,
+        "mana": 4,
+        "descr": "A very powerful character for attacking and defending.",
+        "attack": 7,
+        "defend": 7 }
+    }
