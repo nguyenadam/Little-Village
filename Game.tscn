@@ -21,10 +21,10 @@ __meta__ = {
 }
 
 [node name="Shop" type="RichTextLabel" parent="."]
-margin_left = 1225.38
-margin_top = 37.3755
-margin_right = 1573.38
-margin_bottom = 184.375
+margin_left = 1527.38
+margin_top = 43.3755
+margin_right = 1875.38
+margin_bottom = 190.375
 rect_pivot_offset = Vector2( 219.938, 147 )
 custom_fonts/normal_font = ExtResource( 2 )
 bbcode_enabled = true
