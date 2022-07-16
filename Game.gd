@@ -2,45 +2,28 @@ extends Node2D
 
 var player_cards = []
 var current_dice = []
-var card_template = preload('res://Card.tscn')
+var card_template = preload('res://BuildingCard.tscn')
 var dice_template = preload('res://Dice.tscn')
 var player_level
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	# load card info
-	var data_file = File.new()
-	if data_file.open("res://card_data.json", File.READ) != OK:
-		return
-	var data_text = data_file.get_as_text()
-	data_file.close()
-	var data_parse = JSON.parse(data_text)
-	if data_parse.error != OK:
-		return
-	var card_data = data_parse.result
+
 	
 	# start the player with a wheat field and forest
 	var garden = card_template.instance()
-	var card_name = 'garden'
-	garden.init(card_data[card_name].name, card_data[card_name].cost, 
-		card_data[card_name].output, card_data[card_name].descr, card_data[card_name].type, 
-		card_data[card_name].image_path, card_data[card_name].workers)
+	garden.init('garden')
 	self.add_child(garden)
 	player_cards.append(garden)
 	
 	var garden2 = card_template.instance()
-	card_name = 'garden'
-	garden2.init(card_data[card_name].name, card_data[card_name].cost, 
-		card_data[card_name].output, card_data[card_name].descr, card_data[card_name].type, 
-		card_data[card_name].image_path, card_data[card_name].workers)
+	garden2.init('garden')
 	self.add_child(garden2)
 	player_cards.append(garden2)
 	
 	var grove = card_template.instance()
-	card_name = 'grove'
-	grove.init(card_data[card_name].name, card_data[card_name].cost, 
-		card_data[card_name].output, card_data[card_name].descr, card_data[card_name].type, 
-		card_data[card_name].image_path, card_data[card_name].workers)
+	grove.init('grove')
 	self.add_child(grove)
 	player_cards.append(grove)
 	
