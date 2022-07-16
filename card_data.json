@@ -3,9 +3,16 @@
         "id": 1,
         "name": "Garden",
         "cost": [
-            ["green", 2],
-            ["brown", 1]
+            {
+                "color": "green",
+                "value": 2
+            },
+            {
+                "color": "brown",
+                "value": 1
+            }
         ],
+        "input": [],
         "output": [
             {
                 "color": "green",
@@ -19,20 +26,51 @@
         "image_path": "Assets/card_images/Garden.png",
         "workers": 1
     },
-    "forest": {
+    "grove": {
         "id": 2,
-        "name": "Forest",
-        "series": 1,
-        "mana": 4,
-        "descr": "Attack is a major strength of the character.",
-        "attack": 8,
-        "defend": 2
+        "name": "Grove",
+        "cost": [
+            {
+                "color": "green",
+                "value": 2
+            },
+            {
+                "color": "brown",
+                "value": 1
+            }
+        ],
+        "input": [],
+        "output": [
+            {
+                "color": "brown",
+                "min": 1,
+                "max": 2,
+                "condition": null
+            }
+        ],
+        "descr": "Idk... what is a grove",
+        "type": "resource",
+        "image_path": "Assets/card_images/Grove.png",
+        "workers": 1
     },
-    "3": {
+    "storage_hut": {
         "id": 3,
-        "name": "Max",
+        "name": "Storage Hut",
         "series": 1,
-        "mana": 4,
+        "input": [
+            {
+                "color": "any",
+                "value_max": 2
+            }
+        ],
+        "output": [
+            {
+                "function": {
+                    "arguments": "a,b,c",
+                    "body": "if a.color = 'brown' return ['brown', 3]"
+                }
+            }
+        ],
         "descr": "A very powerful character for attacking and defending.",
         "attack": 7,
         "defend": 7 }
