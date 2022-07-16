@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Main.tres" type="DynamicFont" id=2]
-[ext_resource path="res://Assets/Green1.png" type="Texture" id=3]
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 1 )
@@ -48,13 +47,3 @@ text = "Dice"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 948.043, 935.859 )
-texture = ExtResource( 3 )
-offset = Vector2( -30, -30 )
-
-[node name="Sprite2" type="Sprite" parent="."]
-position = Vector2( 1043.8, 934.599 )
-texture = ExtResource( 3 )
-offset = Vector2( -30, -30 )
