@@ -21,21 +21,24 @@ func _ready():
 #func _process(delta):
 #	pass
 
-func init(tit, co, out, desc, t, workers, image):
-	title = tit
-	cost = co
-	output = out
-	description = desc
-	type = t
-	workers_required = workers
+func init(name):
+	var data_file = File.new()
+	if data_file.open("res://card_data.json", File.READ) != OK:
+		return
+	var data_text = data_file.get_as_text()
+	data_file.close()
+	var data_parse = JSON.parse(data_text)
+	if data_parse.error != OK:
+		return
+	var card_data = data_parse.result
+	
+	title = card_data[name].name
+	cost = card_data[name].cost
+	output = card_data[name].output
+	description = card_data[name].descr
+	type = card_data[name].type
+	workers_required = card_data[name].workers
+	
 	print("Card Created!")
 
-func get_dice():
-	var dice = []
-	for item in output:
-		if item.has('function'):
-			pass # TODO: Implement function processing
-		else:
-			var number = rng.randi_range(item.min, item.max)
-			dice.append([item.color, number])
-	return dice
+
