@@ -66,8 +66,8 @@
         "output": [
             {
                 "function": {
-                    "arguments": "a,b,c",
-                    "body": "if a.color = 'brown' return ['brown', 3]"
+                    "arguments": "",
+                    "body": "return stored_cards"
                 }
             }
         ],

@@ -1,7 +1,9 @@
 extends Node2D
 
 var player_cards = []
+var current_dice = []
 var card_template = preload('res://Card.tscn')
+var player_level
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -16,31 +18,33 @@ func _ready():
 		return
 	var card_data = data_parse.result
 	
-	# start the player with a garden and forest
+	# start the player with a wheat field and forest
 	var garden = card_template.instance()
-	garden.init(card_data['garden'].name, card_data['garden'].cost, 
-		card_data['garden'].output, card_data['garden'].descr, card_data['garden'].type, 
-		card_data['garden'].image_path, card_data['garden'].workers)
+	var card_name = 'garden'
+	garden.init(card_data[card_name].name, card_data[card_name].cost, 
+		card_data[card_name].output, card_data[card_name].descr, card_data[card_name].type, 
+		card_data[card_name].image_path, card_data[card_name].workers)
 	self.add_child(garden)
 	player_cards.append(garden)
 	
+	var grove = card_template.instance()
+	card_name = 'grove'
+	grove.init(card_data[card_name].name, card_data[card_name].cost, 
+		card_data[card_name].output, card_data[card_name].descr, card_data[card_name].type, 
+		card_data[card_name].image_path, card_data[card_name].workers)
+	self.add_child(grove)
+	player_cards.append(grove)
+	
 	render_cards()
-#	var card = load('res://Card.tscn').instance()
-#	self.add_child(card)
-#	card.position = Vector2(200, 200)
-#
-#	var card2 = load('res://Card.tscn').instance()
-#	self.add_child(card2)
-#	card2.position = Vector2(400, 200)
-#
-#	var card3 = load('res://Card.tscn').instance()
-#	self.add_child(card3)
-#	card3.position = Vector2(1100, 200)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+func run_turn():
+	for card in player_cards:
+		current_dice.append(card.get_dice())
 
 func _input(ev):
 	# end turn
