@@ -1,5 +1,6 @@
 extends Node2D
 
+var id
 var title
 var cost
 var output
@@ -32,13 +33,17 @@ func init(name):
 		return
 	var card_data = data_parse.result
 	
+	id = name
 	title = card_data[name].name
-	cost = card_data[name].cost
+	cost = []
+	for dice in card_data[name].cost:
+		cost.append(dice.values())
 	output = card_data[name].output
 	description = card_data[name].descr
 	type = card_data[name].type
 	workers_required = card_data[name].workers
 	
+	$Sprite.set_texture(load("res://" + card_data[name].image_path))
 	print("Card Created!")
 
 
