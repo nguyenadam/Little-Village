@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/A Song to Remember Me By.mp3-1e6bd87d8ecd30ee869b2f9a0a14c31f.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/A Song to Remember Me By.mp3"
+dest_files=[ "res://.import/A Song to Remember Me By.mp3-1e6bd87d8ecd30ee869b2f9a0a14c31f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

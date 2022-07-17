@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Assets/card_images/garden.png" type="Texture" id=1]
 [ext_resource path="res://BuildingCard.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Dice/green1.png" type="Texture" id=3]
+[ext_resource path="res://Assets/glow_rect.png" type="Texture" id=4]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 
@@ -17,8 +19,19 @@ position = Vector2( 99.8561, 49.9336 )
 scale = Vector2( 0.39, 0.39 )
 texture = ExtResource( 1 )
 
+[node name="store1" type="Sprite" parent="."]
+position = Vector2( 99.9461, 49.8896 )
+scale = Vector2( 0.687478, 0.687478 )
+texture = ExtResource( 3 )
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 99.4823, 49.4815 )
 shape = SubResource( 2 )
 
+[node name="glow" type="Sprite" parent="."]
+position = Vector2( 100.11, 50.0549 )
+scale = Vector2( 0.248733, 0.248733 )
+texture = ExtResource( 4 )
+
+[connection signal="input_event" from="." to="." method="_on_Node2D_input_event"]
 [connection signal="mouse_entered" from="." to="." method="_on_Node2D_mouse_entered"]

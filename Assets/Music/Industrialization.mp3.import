@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Industrialization.mp3-347e7cff58a10980082c92df2bee839d.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/Industrialization.mp3"
+dest_files=[ "res://.import/Industrialization.mp3-347e7cff58a10980082c92df2bee839d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

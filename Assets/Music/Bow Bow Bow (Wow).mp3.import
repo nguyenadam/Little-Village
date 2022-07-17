@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Bow Bow Bow (Wow).mp3-a42a4ffb997beeb442f16e53ca3fea66.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/Bow Bow Bow (Wow).mp3"
+dest_files=[ "res://.import/Bow Bow Bow (Wow).mp3-a42a4ffb997beeb442f16e53ca3fea66.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
