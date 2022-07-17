@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Main.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Assets/background.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Secondary.tres" type="DynamicFont" id=4]
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 1 )
@@ -79,3 +80,26 @@ text = "Dice"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="NextTurn" type="RichTextLabel" parent="."]
+margin_left = 1205.0
+margin_top = -1.0
+margin_right = 1331.0
+margin_bottom = 82.0
+custom_fonts/normal_font = ExtResource( 4 )
+text = "Next Turn (T)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NextTurnButton" type="Button" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 1204.0
+margin_top = 3.0
+margin_right = 1324.0
+margin_bottom = 78.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_down" from="NextTurnButton" to="." method="_on_Button_button_down"]

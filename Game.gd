@@ -36,9 +36,6 @@ func _ready():
 	generate_player_card('grove')
 	generate_player_card('storage_hut')
 	
-	generate_shop_card()
-	generate_shop_card()
-	
 	render_cards()
 	render_shop()
 	run_turn()
@@ -58,6 +55,14 @@ func run_turn():
 	
 	current_dice.sort_custom(self, "dice_sort")
 	render_dice()
+	
+	current_selection = {}
+	
+	# temporary thing to maximize game play:
+	# reset shop
+	for item in current_shop:
+		current_shop.erase(item)
+		item.queue_free()
 	
 	# restock shop
 	while len(current_shop) < SHOP_SIZE:
@@ -102,11 +107,11 @@ func handle_dice_click(dice):
 func handle_selection():
 	print(current_selection)
 	if 'card' in current_selection and 'dice' in current_selection and current_selection.card != null and current_selection.dice != null:
-		if current_selection.card.add_item(current_selection.dice.get_values()):
-			remove_die(current_selection.dice.get_values())
-			current_selection.card.hide_glow()
-			current_selection.card = null
-			current_selection.dice = null
+			if current_selection.card.add_item(current_selection.dice.get_values()):
+				remove_die(current_selection.dice.get_values())
+				current_selection.card.hide_glow()
+				current_selection.card = null
+				current_selection.dice = null
 		
 
 func handle_shop_card_click(card):
@@ -157,7 +162,7 @@ func render_dice():
 	derender_dice()
 	for i in len(current_dice):
 		var dice = dice_template.instance()
-		dice.set_texture(current_dice[i][0], current_dice[i][1])
+		dice.try_set_texture(current_dice[i][0], current_dice[i][1])
 		self.add_child(dice)
 		dice_obj_list.append(dice)
 		dice.position = Vector2(i * 100 + 200, 870)
@@ -215,3 +220,7 @@ func are_array_equal(a, b):
 		if a[i] != b[i]:
 			return false
 	return true
+
+
+func _on_Button_button_down():
+	run_turn()

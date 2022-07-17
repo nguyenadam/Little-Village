@@ -4,7 +4,7 @@ signal clicked(node)
 var col
 var val
 
-func set_texture(color, value):
+func try_set_texture(color, value):
 	col = color
 	if color == 'brown':
 		color = 'red'

@@ -15,17 +15,13 @@ func init(name):
 
 func show_prices():
 	if len(cost) >= 1:
-		print("Adding cost die 1")
 		set_cost_dice($cost1, cost[0])
 	if len(cost) >= 2:
-		print("Adding cost die 2")
 		set_cost_dice($cost2, cost[1])
 	if len(cost) >= 3:
-		print("Adding cost die 2")
-		set_cost_dice($cost2, cost[1])
+		set_cost_dice($cost3, cost[2])
 	if len(cost) >= 4:
-		print("Adding cost die 2")
-		set_cost_dice($cost2, cost[1])
+		set_cost_dice($cost3, cost[3])
 	
 func set_cost_dice(obj, item):
 	var color = item[0]

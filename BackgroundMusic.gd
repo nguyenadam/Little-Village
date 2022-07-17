@@ -10,6 +10,7 @@ var _music_list = (["A New World We Haven't Met", "A Song to Remember Me By",
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	randomize()
 	var song = _music_list[randi() % _music_list.size()]
 	song = "res://Assets/Music/" + song + ".mp3"
 	stream = load(song)
