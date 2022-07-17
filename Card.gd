@@ -9,6 +9,8 @@ var type
 var workers_required
 var workers_current
 var stored
+var storage_capacity
+var isShop = false
 
 var rng = RandomNumberGenerator.new()
 # Called when the node enters the scene tree for the first time.
@@ -42,8 +44,12 @@ func init(name):
 	description = card_data[name].descr
 	type = card_data[name].type
 	workers_required = card_data[name].workers
+	stored = []
+	storage_capacity = len(card_data[name].input)
 	
 	$Sprite.set_texture(load("res://" + card_data[name].image_path))
 	print("Card Created!")
 
+func add_item(item):
+	return false
 

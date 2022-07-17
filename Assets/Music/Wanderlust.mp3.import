@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Wanderlust.mp3-3e8f949967c198fd7e14d2fd630b0b5f.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/Wanderlust.mp3"
+dest_files=[ "res://.import/Wanderlust.mp3-3e8f949967c198fd7e14d2fd630b0b5f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

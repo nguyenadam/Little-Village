@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Weekend.mp3-b02e19a60f8de82a76be4d672fb8cee8.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/Weekend.mp3"
+dest_files=[ "res://.import/Weekend.mp3-b02e19a60f8de82a76be4d672fb8cee8.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

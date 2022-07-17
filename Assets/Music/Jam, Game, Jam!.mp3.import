@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Jam, Game, Jam!.mp3-68198b680c550ae902fccaa253384d0b.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/Jam, Game, Jam!.mp3"
+dest_files=[ "res://.import/Jam, Game, Jam!.mp3-68198b680c550ae902fccaa253384d0b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

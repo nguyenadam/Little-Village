@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Time to Jam, Time to Grind.mp3-9afdb529705f4f111bee53c02af3b8af.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/Time to Jam, Time to Grind.mp3"
+dest_files=[ "res://.import/Time to Jam, Time to Grind.mp3-9afdb529705f4f111bee53c02af3b8af.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

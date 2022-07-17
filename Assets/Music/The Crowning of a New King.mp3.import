@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/The Crowning of a New King.mp3-2682edae9e94dee4e82685f24b73dad6.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/The Crowning of a New King.mp3"
+dest_files=[ "res://.import/The Crowning of a New King.mp3-2682edae9e94dee4e82685f24b73dad6.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

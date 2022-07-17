@@ -23,7 +23,7 @@
         ],
         "descr": "Idk... some birds or something",
         "type": "resource",
-        "image_path": "Assets/card_images/Garden.png",
+        "image_path": "Assets/card_images/garden.png",
         "workers": 1
     },
     "grove": {
@@ -50,13 +50,22 @@
         ],
         "descr": "Idk... what is a grove",
         "type": "resource",
-        "image_path": "Assets/card_images/Grove.png",
+        "image_path": "Assets/card_images/grove.png",
         "workers": 1
     },
     "storage_hut": {
         "id": 3,
         "name": "Storage Hut",
-        "series": 1,
+        "cost": [
+            {
+                "color": "brown",
+                "value": 1
+            },
+            {
+                "color": "brown",
+                "value": 2
+            }
+        ],
         "input": [
             {
                 "color": "any",
@@ -71,7 +80,118 @@
                 }
             }
         ],
-        "descr": "A very powerful character for attacking and defending.",
-        "attack": 7,
-        "defend": 7 }
+        "descr": "A primative storage building. Allows you to carry a single die over to the next round.",
+        "type": "storage",
+        "image_path": "Assets/card_images/storage_hut.png",
+        "workers": 1
+    },
+    "wheat_field": {
+        "id": 4,
+        "name": "Wheat Field",
+        "cost": [
+            {
+                "color": "green",
+                "value": 1
+            },
+            {
+                "color": "green",
+                "value": 2
+            },
+            {
+                "color": "brown",
+                "value": 2
+            }
+        ],
+        "input": [],
+        "output": [
+            {
+                "color": "green",
+                "min": 1,
+                "max": 3,
+                "condition": null
+            }
+        ],
+        "descr": "A piece of land with higher potential than your starting garden.",
+        "type": "resource",
+        "image_path": "Assets/card_images/wheat_field.png",
+        "workers": 2
+    },
+    "woods": {
+        "id": 5,
+        "name": "Woods",
+        "cost": [
+            {
+                "color": "green",
+                "value": 2
+            },
+            {
+                "color": "green",
+                "value": 3
+            },
+            {
+                "color": "brown",
+                "value": 2
+            }
+        ],
+        "input": [],
+        "output": [
+            {
+                "color": "brown",
+                "min": 2,
+                "max": 3,
+                "condition": null
+            }
+        ],
+        "descr": "Timberrrrrrrrrrrrrr!",
+        "type": "resource",
+        "image_path": "Assets/card_images/woods.png",
+        "workers": 2
+    },
+    "carrot_farm": {
+        "id": 6,
+        "name": "Carrot Farm",
+        "cost": [
+            {
+                "color": "green",
+                "value": 2
+            },
+            {
+                "color": "green",
+                "value": 3
+            },
+            {
+                "color": "brown",
+                "value": 2
+            },
+            {
+                "color": "brown",
+                "value": 3
+            }
+        ],
+        "input": [],
+        "output": [
+            {
+                "color": "green",
+                "min": 1,
+                "max": 1,
+                "condition": null
+            },
+            {
+                "color": "green",
+                "min": 1,
+                "max": 1,
+                "condition": null
+            },
+            {
+                "color": "green",
+                "min": 1,
+                "max": 1,
+                "condition": null
+            }
+        ],
+        "descr": "Timberrrrrrrrrrrrrr!",
+        "type": "resource",
+        "image_path": "Assets/card_images/carrot_farm.png",
+        "workers": 3
     }
+}

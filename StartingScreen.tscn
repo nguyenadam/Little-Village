@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://StartingScreen.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Main.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Assets/main_screen.png" type="Texture" id=3]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 960, 540 )
+texture = ExtResource( 3 )
+
+[node name="Button" type="Button" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 545.135
+margin_top = 639.757
+margin_right = 1397.14
+margin_bottom = 874.757
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="LineEdit" parent="."]
+margin_left = 668.406
+margin_top = 518.432
+margin_right = 1275.41
+margin_bottom = 604.432
+custom_fonts/font = ExtResource( 2 )
+placeholder_text = "Village name"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_down" from="Button" to="." method="_on_Button_button_down"]
