@@ -1,3 +1,3 @@
 extends Node
 
-var village_name
+var village_name = "name"

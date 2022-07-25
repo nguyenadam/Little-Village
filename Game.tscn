@@ -34,8 +34,8 @@ margin_bottom = 98.5595
 rect_pivot_offset = Vector2( 219.938, 147 )
 custom_fonts/normal_font = ExtResource( 2 )
 bbcode_enabled = true
-bbcode_text = "[center]Adamville[/center]"
-text = "Adamville"
+bbcode_text = "[center]Adam[/center]"
+text = "Adam"
 __meta__ = {
 "_edit_use_anchors_": false
 }
